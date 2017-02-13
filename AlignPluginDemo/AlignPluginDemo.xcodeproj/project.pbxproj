@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		545474AC1E4D6E48002AA154 /* AlignCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 545474AB1E4D6E48002AA154 /* AlignCommand.m */; };
+		5456AA851E4C6414001C760A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456AA841E4C6414001C760A /* AppDelegate.m */; };
+		5456AA881E4C6414001C760A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456AA871E4C6414001C760A /* main.m */; };
+		5456AA8A1E4C6414001C760A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5456AA891E4C6414001C760A /* Assets.xcassets */; };
+		5456AA8D1E4C6414001C760A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5456AA8B1E4C6414001C760A /* MainMenu.xib */; };
+		5456AA9B1E4C6494001C760A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5456AA9A1E4C6494001C760A /* Cocoa.framework */; };
+		5456AAA11E4C6494001C760A /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456AAA01E4C6494001C760A /* SourceEditorExtension.m */; };
+		5456AAA41E4C6494001C760A /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456AAA31E4C6494001C760A /* SourceEditorCommand.m */; };
+		5456AAA81E4C6494001C760A /* AlignPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5456AA981E4C6494001C760A /* AlignPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5456AAA61E4C6494001C760A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5456AA781E4C6414001C760A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5456AA971E4C6494001C760A;
+			remoteInfo = AlignPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5456AAAC1E4C6494001C760A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5456AAA81E4C6494001C760A /* AlignPlugin.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		545474AA1E4D6E48002AA154 /* AlignCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignCommand.h; sourceTree = "<group>"; };
+		545474AB1E4D6E48002AA154 /* AlignCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignCommand.m; sourceTree = "<group>"; };
+		5456AA801E4C6414001C760A /* AlignPluginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlignPluginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5456AA831E4C6414001C760A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5456AA841E4C6414001C760A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5456AA871E4C6414001C760A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5456AA891E4C6414001C760A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5456AA8C1E4C6414001C760A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5456AA8E1E4C6414001C760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5456AA981E4C6494001C760A /* AlignPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AlignPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5456AA9A1E4C6494001C760A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5456AA9E1E4C6494001C760A /* AlignPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlignPlugin.entitlements; sourceTree = "<group>"; };
+		5456AA9F1E4C6494001C760A /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		5456AAA01E4C6494001C760A /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		5456AAA21E4C6494001C760A /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
+		5456AAA31E4C6494001C760A /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
+		5456AAA51E4C6494001C760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5456AA7D1E4C6414001C760A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5456AA951E4C6494001C760A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5456AA9B1E4C6494001C760A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5456AA771E4C6414001C760A = {
+			isa = PBXGroup;
+			children = (
+				5456AA821E4C6414001C760A /* AlignPluginDemo */,
+				5456AA9C1E4C6494001C760A /* AlignPlugin */,
+				5456AA991E4C6494001C760A /* Frameworks */,
+				5456AA811E4C6414001C760A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5456AA811E4C6414001C760A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5456AA801E4C6414001C760A /* AlignPluginDemo.app */,
+				5456AA981E4C6494001C760A /* AlignPlugin.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5456AA821E4C6414001C760A /* AlignPluginDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5456AA831E4C6414001C760A /* AppDelegate.h */,
+				5456AA841E4C6414001C760A /* AppDelegate.m */,
+				5456AA891E4C6414001C760A /* Assets.xcassets */,
+				5456AA8B1E4C6414001C760A /* MainMenu.xib */,
+				5456AA8E1E4C6414001C760A /* Info.plist */,
+				5456AA861E4C6414001C760A /* Supporting Files */,
+			);
+			path = AlignPluginDemo;
+			sourceTree = "<group>";
+		};
+		5456AA861E4C6414001C760A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5456AA871E4C6414001C760A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5456AA991E4C6494001C760A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5456AA9A1E4C6494001C760A /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5456AA9C1E4C6494001C760A /* AlignPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				545474AA1E4D6E48002AA154 /* AlignCommand.h */,
+				545474AB1E4D6E48002AA154 /* AlignCommand.m */,
+				5456AA9F1E4C6494001C760A /* SourceEditorExtension.h */,
+				5456AAA01E4C6494001C760A /* SourceEditorExtension.m */,
+				5456AAA21E4C6494001C760A /* SourceEditorCommand.h */,
+				5456AAA31E4C6494001C760A /* SourceEditorCommand.m */,
+				5456AAA51E4C6494001C760A /* Info.plist */,
+				5456AA9D1E4C6494001C760A /* Supporting Files */,
+			);
+			path = AlignPlugin;
+			sourceTree = "<group>";
+		};
+		5456AA9D1E4C6494001C760A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5456AA9E1E4C6494001C760A /* AlignPlugin.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5456AA7F1E4C6414001C760A /* AlignPluginDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5456AA911E4C6414001C760A /* Build configuration list for PBXNativeTarget "AlignPluginDemo" */;
+			buildPhases = (
+				5456AA7C1E4C6414001C760A /* Sources */,
+				5456AA7D1E4C6414001C760A /* Frameworks */,
+				5456AA7E1E4C6414001C760A /* Resources */,
+				5456AAAC1E4C6494001C760A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5456AAA71E4C6494001C760A /* PBXTargetDependency */,
+			);
+			name = AlignPluginDemo;
+			productName = AlignPluginDemo;
+			productReference = 5456AA801E4C6414001C760A /* AlignPluginDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5456AA971E4C6494001C760A /* AlignPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5456AAA91E4C6494001C760A /* Build configuration list for PBXNativeTarget "AlignPlugin" */;
+			buildPhases = (
+				5456AA941E4C6494001C760A /* Sources */,
+				5456AA951E4C6494001C760A /* Frameworks */,
+				5456AA961E4C6494001C760A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlignPlugin;
+			productName = AlignPlugin;
+			productReference = 5456AA981E4C6494001C760A /* AlignPlugin.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5456AA781E4C6414001C760A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = sf;
+				TargetAttributes = {
+					5456AA7F1E4C6414001C760A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EW7252FZJN;
+						ProvisioningStyle = Automatic;
+					};
+					5456AA971E4C6494001C760A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EW7252FZJN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5456AA7B1E4C6414001C760A /* Build configuration list for PBXProject "AlignPluginDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5456AA771E4C6414001C760A;
+			productRefGroup = 5456AA811E4C6414001C760A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5456AA7F1E4C6414001C760A /* AlignPluginDemo */,
+				5456AA971E4C6494001C760A /* AlignPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5456AA7E1E4C6414001C760A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5456AA8A1E4C6414001C760A /* Assets.xcassets in Resources */,
+				5456AA8D1E4C6414001C760A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5456AA961E4C6494001C760A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5456AA7C1E4C6414001C760A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5456AA881E4C6414001C760A /* main.m in Sources */,
+				5456AA851E4C6414001C760A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5456AA941E4C6494001C760A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5456AAA11E4C6494001C760A /* SourceEditorExtension.m in Sources */,
+				5456AAA41E4C6494001C760A /* SourceEditorCommand.m in Sources */,
+				545474AC1E4D6E48002AA154 /* AlignCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5456AAA71E4C6494001C760A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5456AA971E4C6494001C760A /* AlignPlugin */;
+			targetProxy = 5456AAA61E4C6494001C760A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5456AA8B1E4C6414001C760A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5456AA8C1E4C6414001C760A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5456AA8F1E4C6414001C760A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5456AA901E4C6414001C760A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5456AA921E4C6414001C760A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EW7252FZJN;
+				INFOPLIST_FILE = AlignPluginDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.AlignPluginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5456AA931E4C6414001C760A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EW7252FZJN;
+				INFOPLIST_FILE = AlignPluginDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.AlignPluginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5456AAAA1E4C6494001C760A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AlignPlugin/AlignPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EW7252FZJN;
+				INFOPLIST_FILE = AlignPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.AlignPluginDemo.AlignPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5456AAAB1E4C6494001C760A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AlignPlugin/AlignPlugin.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EW7252FZJN;
+				INFOPLIST_FILE = AlignPlugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.AlignPluginDemo.AlignPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5456AA7B1E4C6414001C760A /* Build configuration list for PBXProject "AlignPluginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5456AA8F1E4C6414001C760A /* Debug */,
+				5456AA901E4C6414001C760A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5456AA911E4C6414001C760A /* Build configuration list for PBXNativeTarget "AlignPluginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5456AA921E4C6414001C760A /* Debug */,
+				5456AA931E4C6414001C760A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5456AAA91E4C6494001C760A /* Build configuration list for PBXNativeTarget "AlignPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5456AAAA1E4C6494001C760A /* Debug */,
+				5456AAAB1E4C6494001C760A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5456AA781E4C6414001C760A /* Project object */;
+}
