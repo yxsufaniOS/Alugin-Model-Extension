@@ -1,11 +1,7 @@
 # Alugin-Model-Extension
 Xcode 工具排版代码和json转模型,A Xcode Source Editor Extension to align your code or exchange jsondata.
 
-![1](http://upload-images.jianshu.io/upload_images/2106071-1b5d38020bac058c.gif)
-
 ![2](http://upload-images.jianshu.io/upload_images/2106071-1f2e2a5991a26d66.gif)
-
-![3](http://upload-images.jianshu.io/upload_images/2106071-557b66735b1f208e.gif)
 
 ### Installation Guide (Xcode 8 / OSX 10.11+)
 
