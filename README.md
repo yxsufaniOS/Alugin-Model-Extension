@@ -1,21 +1,20 @@
 # Alugin-Model-Extension
 Xcode 工具排版代码和json转模型,A Xcode Source Editor Extension to align your code or exchange jsondata.
 
-![](http://upload-images.jianshu.io/upload_images/2106071-1b5d38020bac058c.gif?imageMogr2/auto-orient/strip)
+![1](http://upload-images.jianshu.io/upload_images/2106071-1b5d38020bac058c.gif)
 
-![](http://upload-images.jianshu.io/upload_images/2106071-1f2e2a5991a26d66.gif?imageMogr2/auto-orient/strip)
+![2](http://upload-images.jianshu.io/upload_images/2106071-1f2e2a5991a26d66.gif)
 
-![](http://upload-images.jianshu.io/upload_images/2106071-654112d8dabf9300.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![3](http://upload-images.jianshu.io/upload_images/2106071-557b66735b1f208e.gif)
 
 ### Installation Guide (Xcode 8 / OSX 10.11+)
 
-* 1.下载项目 [Align](https://codeload.github.com/yxsufaniOS/Alugin-Model-Extension/zip/master) \n
-* 2.打开项目，编译(Command+B)。\n
-* 3.找到products中的appex文件，拷贝到/Applications/Xcode.app/Contents/PlugIns中。
-* 4.重启Xcode，查看Editor中是否存在AlignPlugin。
-* 5.可在Xcode -> "Preferences" -> "Key Bindings" -> 搜索插件plugin或者插件名字 -> 添加对应的快捷键。
-* 6. (/^▽^)/
+1. 下载项目 [Align](https://codeload.github.com/yxsufaniOS/Alugin-Model-Extension/zip/master) 
+2. 打开项目，编译(Command+B)。
+3. 找到products中的appex文件，拷贝到/Applications/Xcode.app/Contents/PlugIns中。
+4. 重启Xcode，查看Editor中是否存在AlignPlugin。
+5. 可在Xcode -> "Preferences" -> "Key Bindings" -> 搜索插件plugin或者插件名字 -> 添加对应的快捷键。
+6. (/^▽^)/
 
 ###How
 
