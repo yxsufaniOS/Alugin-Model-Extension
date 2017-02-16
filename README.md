@@ -14,6 +14,7 @@ Xcode 工具排版代码和json转模型,A Xcode Source Editor Extension to alig
 
 ###How
 
+[博客](http://www.jianshu.com/p/e5755244ce30)
 
 ### Usage
 
