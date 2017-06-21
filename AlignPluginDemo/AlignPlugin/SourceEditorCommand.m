@@ -8,7 +8,9 @@
 
 #import "SourceEditorCommand.h"
 
-@implementation SourceEditorCommand
+@implementation SourceEditorCommand{
+    NSMutableArray *_annoArray;
+}
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler
 {
@@ -18,16 +20,46 @@
     NSInteger startLine = range.start.line;
     NSInteger endLine = range.end.line;
     NSString *totalstr = @"";
+    _annoArray = [NSMutableArray array];
     for (NSInteger i = startLine; i <= endLine; i++) {
-        totalstr = [totalstr stringByAppendingString:invocation.buffer.lines[i]];
+        NSString *curLine = invocation.buffer.lines[i];
+        NSRange range = [curLine rangeOfString:@"//" options:NSBackwardsSearch];
+        if (range.location != NSNotFound) {
+            NSRange httpRange = [curLine rangeOfString:@"://" options:NSBackwardsSearch];
+            if (httpRange.location != NSNotFound && httpRange.location == range.location-1) {
+                
+            }else{
+                NSRange range2 = [curLine rangeOfString:@"////" options:NSBackwardsSearch];
+                if (range2.location != NSNotFound) {
+                    curLine = [curLine stringByReplacingOccurrencesOfString:@"////" withString:@"//"];
+                    range = [curLine rangeOfString:@"//" options:NSBackwardsSearch];
+                }
+                
+                NSRange range3 = [curLine rangeOfString:@"///" options:NSBackwardsSearch];
+                if (range3.location != NSNotFound) {
+                    curLine = [curLine stringByReplacingOccurrencesOfString:@"///" withString:@"//"];
+                    range = [curLine rangeOfString:@"//" options:NSBackwardsSearch];
+                }
+                
+                
+                curLine = [curLine substringToIndex:range.location];
+                [_annoArray addObject:@(i)];
+                curLine = [curLine stringByAppendingString:@"\n"];
+            }
+            
+        }
+        totalstr = [totalstr stringByAppendingString:curLine];
     }
-    
+    NSLog(@"string :: %@",totalstr);
     NSData *resData = [[NSData alloc] initWithData:[totalstr dataUsingEncoding:NSUTF8StringEncoding]];
     id  jsonObj = [NSJSONSerialization JSONObjectWithData:resData options:NSJSONReadingMutableLeaves error:nil];
     NSLog(@"jsonOBj : %@",jsonObj);
     NSDictionary *dic = jsonObj == nil ? nil : [self getDictionaryWithjsonObj:jsonObj];
-    if (dic == nil) return;
-    
+    if (dic == nil) {
+        NSError *error = [NSError errorWithDomain:@"json解析为nil" code:100 userInfo:nil];
+        completionHandler(error);
+        return;
+    }
     __block NSString *str = @"";
     __block NSString *str2 = @"+ (NSDictionary *)JSONKeyPathsByPropertyKey {\n    return @{ ";
     __block NSInteger maxLocation = 0;
@@ -46,8 +78,8 @@
         }else{
             type = @"id";
         }
-        
-        str = [str stringByAppendingString:@"\n/**   */"];
+        NSString *annotate = [self getAnnotateByKey:key lines:invocation.buffer.lines]?:@"   ";
+        str = [str stringByAppendingString:[NSString stringWithFormat:@"\n/** %@ */",annotate]];
         str = [str stringByAppendingString:[NSString stringWithFormat:@"\n@property (nonatomic, strong) %@ *%@;",type,key]];
         
         NSString *dicStr = [NSString stringWithFormat:@"@\"%@\" : @\"%@\",\n              ",key,key];
@@ -68,7 +100,7 @@
         }];
     }
     
-    str2 = [str2 stringByAppendingString:@"}\n}"];
+    str2 = [str2 stringByAppendingString:@"};\n}"];
     [invocation.buffer.lines insertObject:str2 atIndex:endLine+1];
     [invocation.buffer.lines insertObject:str atIndex:endLine+1];
     completionHandler(nil);
@@ -83,6 +115,34 @@
     }else{
         return nil;
     }
+}
+
+
+- (NSString *)getAnnotateByKey:(NSString *)key lines:(NSArray<NSString *> *)lines{
+    __block NSString *anno = nil;
+    [_annoArray enumerateObjectsUsingBlock:^(NSNumber *  _Nonnull line, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSRange range = [lines[line.integerValue] rangeOfString:key];
+        if (range.location != NSNotFound) {
+            range = [lines[line.integerValue] rangeOfString:@"//" options:NSBackwardsSearch];
+            if (range.location != NSNotFound) {
+                anno = [lines[line.integerValue] substringFromIndex:(range.location+range.length)];
+                if ([anno hasSuffix:@"\n"]) {
+                    anno = [anno substringToIndex:anno.length-1];
+                }
+                if (anno.length > 0) {
+                    if ([anno hasPrefix:@" "]) {
+                        anno = [anno stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" "]];
+                    }else if ([anno hasPrefix:@"	"]){
+                        anno = [anno stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"	"]];
+                    }
+                }
+                NSLog(@"key :: %@  \n  anno  ::  %@",key,anno);
+            }
+            [_annoArray removeObjectAtIndex:idx];
+            *stop = YES;
+        }
+    }];
+    return anno;
 }
 
 @end

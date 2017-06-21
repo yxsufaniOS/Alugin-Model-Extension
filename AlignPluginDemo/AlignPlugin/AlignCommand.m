@@ -38,7 +38,7 @@
     XCSourceTextRange *range      = invocation.buffer.selections.firstObject;
     NSInteger startLine           = range.start.line;
     NSInteger endLine             = range.end.line;
-    NSInteger maxLocation     = 0;
+    NSInteger maxLocation         = 0;
     NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
     for (NSInteger i = startLine; i <= endLine; i++) {
         NSStringCompareOptions options = NSCaseInsensitiveSearch;

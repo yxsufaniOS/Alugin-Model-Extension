@@ -16,6 +16,7 @@
 		5456AAA11E4C6494001C760A /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456AAA01E4C6494001C760A /* SourceEditorExtension.m */; };
 		5456AAA41E4C6494001C760A /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5456AAA31E4C6494001C760A /* SourceEditorCommand.m */; };
 		5456AAA81E4C6494001C760A /* AlignPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5456AA981E4C6494001C760A /* AlignPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		54575E371E65633C000F610E /* PropertyMethodCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 54575E361E65633C000F610E /* PropertyMethodCommand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		5456AAA21E4C6494001C760A /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
 		5456AAA31E4C6494001C760A /* SourceEditorCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorCommand.m; sourceTree = "<group>"; };
 		5456AAA51E4C6494001C760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54575E351E65633C000F610E /* PropertyMethodCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyMethodCommand.h; sourceTree = "<group>"; };
+		54575E361E65633C000F610E /* PropertyMethodCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyMethodCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 			children = (
 				545474AA1E4D6E48002AA154 /* AlignCommand.h */,
 				545474AB1E4D6E48002AA154 /* AlignCommand.m */,
+				54575E351E65633C000F610E /* PropertyMethodCommand.h */,
+				54575E361E65633C000F610E /* PropertyMethodCommand.m */,
 				5456AA9F1E4C6494001C760A /* SourceEditorExtension.h */,
 				5456AAA01E4C6494001C760A /* SourceEditorExtension.m */,
 				5456AAA21E4C6494001C760A /* SourceEditorCommand.h */,
@@ -267,6 +272,7 @@
 				5456AAA11E4C6494001C760A /* SourceEditorExtension.m in Sources */,
 				5456AAA41E4C6494001C760A /* SourceEditorCommand.m in Sources */,
 				545474AC1E4D6E48002AA154 /* AlignCommand.m in Sources */,
+				54575E371E65633C000F610E /* PropertyMethodCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
